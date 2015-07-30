@@ -5,12 +5,13 @@
 
 	<body>
 	<?php
-		function doubler($value)
+		function doubler(&$value)
 		{
-			return $value << 1;
+			 $value = $value << 1;
 		}
-
-		echo "A pair of 13s is " . doubler(13);
+		$a = 3;
+		doubler($a);
+		echo $a;
 	?>
 
 	</body>
