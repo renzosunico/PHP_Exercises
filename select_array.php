@@ -5,14 +5,12 @@
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
         Select your personality attributes: <br/>
-            <select name="attributes[]" multiple>
-                <option value="perky"> Perky </option>
-                <option value="morose"> Morose </option>
-                <option value="thinking"> Thinking </option>
-                <option value="feeling"> Feeling </option>
-                <option value="thrifty"> Spend-thrift </option>
-                <option value="shopper"> Shopper </option>
-            </select><br/>
+            <input type="checkbox" name="attributes[]" value="perky"/> Perky <br/>
+            <input type="checkbox" name="attributes[]" value="morose"/> Morose <br/>
+            <input type="checkbox" name="attributes[]" value="thinking"/> Thinking <br/>
+            <input type="checkbox" name="attributes[]" value="feeling"/> Feeling <br/>
+            <input type="checkbox" name="attributes[]" value="thrifty"/> Spend-thrift <br/>
+            <input type="checkbox" name="attributes[]" value="shopper"/> Shopper <br/>
             <input type="submit" name="s" value="Record my personality" />
         </form>
         
