@@ -4,7 +4,7 @@ class Person
 {
     public $name = '';
     
-    function getName()
+    final function getName()
     {
         return $this->name;
     }
@@ -15,4 +15,15 @@ class Person
     }
 }
 
+class Child extends Person
+{
+    /* Fatal error: Cannot override final method Person::getName() in                   /var/www/PHP_Exercises/Person.php on line 24    */
+    
+    function getName()
+    {
+        
+    }
+}
+
+    $object = new Child();
 ?>
