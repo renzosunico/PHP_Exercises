@@ -45,3 +45,5 @@ class BasicArray implements Iterator
     foreach ($basicArray as $key => $value) {
         echo "{$key} => {$value} <br />";
     }
+
+?>
