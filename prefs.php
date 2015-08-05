@@ -2,6 +2,7 @@
     <head><title>Preferences Set</title></head>
     <body>
         <?php
+            session_start();
             $colors = array (
                 'black' => "#000000",
                 'white' => "#ffffff",
@@ -12,8 +13,9 @@
             $backgroundName = $_POST['background'];
             $foregroundName = $_POST['foreground'];
 
-            setcookie('bg', $colors[$backgroundName]);
-            setcookie('fg', $colors[$foregroundName]);
+            $_SESSION['backgroundName'] = $backgroundName;
+            $_SESSION['foregroundName'] = $foregroundName;
+
         ?>
 
         <p>Thank you. Your preferences have been changed to:<br />
