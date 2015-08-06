@@ -2,11 +2,11 @@
     if($_POST['bgcolor']) {
         setcookie('bgcolor', $_POST['bgcolor'], time() + (60 * 60 * 24 * 7));
     }
-    if (isset($_COOKIE['bgcolor'])) {
-        $backgroundName = $_COOKIE['bgcolor'];
-    }
-    else if (isset($_POST['bgcolor'])) {
+    if (isset($_POST['bgcolor'])) {
         $backgroundName = $_POST['bgcolor'];
+    }
+    else if(isset($_COOKIE['bgcolor'])) {
+        $backgroundName = $_COOKIE['bgcolor'];
     }
     else {
         $backgroundName = "gray";
@@ -15,7 +15,7 @@
 <html>
     <head><title>Save It</title></head>
     <body bgcolor="<?= $backgroundName; ?>">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST">
             <p>Background color:
                 <select name="bgcolor">
                     <option value="gray">Gray</option>
